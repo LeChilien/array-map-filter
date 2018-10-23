@@ -43,8 +43,21 @@ En sortie: [
  */
 
 function getFoodCategories(foods) {
+  const resultTab = foods.map(function (tabItem) {
+    if (tabItem.isVegetarian === true) {
+      return (tabItem.food + " is suitable for vegetarians")
+    } else {
+      return (tabItem.food + " is not suitable for vegetarians")
+    }
+  })
+  return resultTab
 }
 
+/*
+function getFoodCategories(foods) {
+  return foods.map(food => (food.isVegetarian)?food.food + " is suitable for vegetarians":food.food + " is not suitable for vegetarians")
+}
+*/
 
 
 // Ne pas modifier l'export
